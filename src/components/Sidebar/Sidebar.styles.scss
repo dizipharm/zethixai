@@ -1,0 +1,47 @@
+@import "../../styles/variables";
+
+.sidebar {
+  bottom: 0;
+  float: none;
+  left: 0;
+  position: fixed;
+  top: 61px;
+  width: 280px;
+  background: #55595e;
+  overflow-y: auto;
+
+  .nav-item {
+    border-bottom: 1px solid $white;
+  }
+
+  .link-dark {
+    color: $white;
+    text-decoration: none;
+    padding-left: 50px;
+    margin: 10px 0px;
+    display: block;
+    font-size: 0.85rem;
+  }
+
+  .nav-link {
+    color: $white !important;
+    padding: 15px 10px;
+    border-radius: 0px;
+    font-size: 0.85rem;
+
+    svg {
+      width: 35px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    &:hover {
+      color: $oragne !important;
+    }
+
+    &.active {
+      background-color: #f47920 !important;
+      color: $white !important;
+    }
+  }
+}

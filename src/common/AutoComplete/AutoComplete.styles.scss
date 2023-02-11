@@ -1,0 +1,30 @@
+.auto-complete-div {
+  position: relative;
+
+  .srchList {
+    background-color: #eeeeee;
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+
+    ul {
+      list-style: none;
+      color: #363636;
+      max-height: 150px;
+      overflow-y: auto;
+      line-height: 30px;
+      padding: 5px 10px;
+      border: 1px solid #c6c6c6;
+      margin-bottom: 0px;
+      border-radius: 3px;
+
+      li {
+        cursor: pointer;
+      }
+    }
+  }
+
+  input {
+    font-size: 14px;
+  }
+}

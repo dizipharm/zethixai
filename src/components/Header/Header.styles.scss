@@ -1,0 +1,66 @@
+@import "../../styles/variables";
+
+.header {
+  height: 60px;
+  min-width: 320px;
+  box-sizing: border-box;
+  z-index: 9;
+  width: 100%;
+  position: fixed;
+  background-color: $white;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+
+  .header-left {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 401px;
+    flex: 0 0 280px;
+    border-right: 1px solid #eee;
+    height: 60px;
+  }
+
+  .header-right {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1;
+    flex: 1 1;
+    position: relative;
+
+    a.nav-link,
+    .dropdown-item {
+      padding: 0 15px;
+      font-size: 0.85rem;
+      line-height: 30px;
+      color: $font-color;
+    }
+
+    .dropdown-item svg {
+      margin-right: 5px;
+    }
+  }
+}
+
+.logo {
+  margin-left: 10px;
+  margin-top: 10px;
+  display: block;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.header .header-right a.nav-link.active {
+  // color: #f47920 !important;
+}
+
+.last-menu {
+  border-right: 1px solid #faceae;
+  margin-right: 15px;
+}
+
+.count {
+  color: $oragne;
+}
+
+.prof-border {
+  border-left: 1px solid #ddd;
+}

@@ -1,0 +1,129 @@
+@import "../../styles/variables";
+
+.order-table {
+  td {
+    vertical-align: middle;
+  }
+
+  .order-thead-tr {
+    vertical-align: middle;
+  }
+
+  .date-format-info {
+    font-size: 0.7em;
+    font-weight: 500;
+    display: block;
+    color: #6c757d !important;
+  }
+
+  .order-date {
+    width: 130px;
+  }
+
+  .order-id {
+    width: 160px;
+  }
+
+  .order-total {
+    width: 100px;
+    text-align: center;
+  }
+
+  .order-address {
+    width: 250px;
+  }
+
+  .orders-btn {
+    width: 200px;
+    .btn {
+      padding: 0.15rem 0.3rem;
+      font-size: 0.775rem;
+      width: 53px;
+      margin-top: 5px;
+    }
+
+    .btn-info {
+      color: #fff;
+      background-color: #55595e;
+      border-color: #55595e;
+    }
+
+    .btn-success {
+      color: #fff;
+      background-color: #198754;
+      border-color: #198754;
+    }
+
+    .btn-danger {
+      color: #fff;
+      background-color: #f47920;
+      border-color: #f47920;
+    }
+
+    .btn-shipping {
+      color: #fff;
+      background-color: #3eb19a;
+      border-color: #3eb19a;
+      width: 120px;
+    }
+  }
+
+  .reject {
+    width: 110px;
+    text-align: center;
+  }
+
+  .accept {
+    width: 150px;
+    text-align: center;
+  }
+}
+
+.order-empty-data {
+  td {
+    color: $oragne;
+  }
+}
+
+.order-nav {
+  .nav-link {
+    color: inherit;
+  }
+  .nav-link.active {
+    color: #f47920;
+    background-color: transparent;
+  }
+}
+
+.order-modal {
+  .order-brand {
+    width: 200px;
+  }
+
+  .order-total {
+    width: 100px;
+    text-align: center;
+  }
+
+  .order-ndc {
+    width: 150px;
+  }
+
+  .orders-btn {
+    width: 150px;
+  }
+}
+
+.shipment-modal {
+  .modal-body {
+    height: 500px;
+    overflow-y: scroll;
+  }
+}
+
+.phone-in-order {
+  font-size: 9px;
+  position: relative;
+  top: -1px;
+  margin-right: 3px;
+}

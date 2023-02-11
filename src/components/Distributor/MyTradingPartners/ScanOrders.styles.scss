@@ -1,0 +1,70 @@
+@import "../../../styles/variables";
+
+.nickname small {
+  font-size: 14px;
+}
+
+.block-title {
+  margin: 0;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.block-title svg {
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.block-heading {
+}
+
+.primary-stats {
+  border-right: 1px solid #eee;
+}
+
+.primary-stats .value {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.block-div .view-statement-link {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+.block-div .view-statement-link svg {
+  font-size: 9px;
+  margin-right: 2px;
+}
+
+.secondary-stats {
+  padding: 10px;
+}
+
+.secondary-stats .block:first-child {
+  margin-bottom: 0px;
+}
+
+.secondary-stats .block .label {
+  min-width: 90px;
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #9b9b9b;
+}
+
+.secondary-stats .value {
+  font-weight: 400;
+  font-size: 14px;
+  color: #444;
+}
+
+.icon-green {
+  color: $icon-green;
+}
+
+.icon-orange {
+  color: $icon-orange;
+}

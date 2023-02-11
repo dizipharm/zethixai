@@ -1,0 +1,245 @@
+.shipment-details,
+.product-details {
+  line-height: 30px;
+}
+
+.shipment-details .label {
+  width: 180px;
+}
+
+.shipment-details .text {
+  line-height: 25px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+.progress-tracker--center {
+  text-align: center;
+}
+.progress-tracker {
+  display: flex;
+  margin: 20px auto;
+  padding: 0;
+  list-style: none;
+}
+
+.progress-step {
+  flex: 1 1 0%;
+  margin: 0;
+  padding: 0;
+  min-width: 24px;
+}
+
+.progress-step .progress-marker {
+  color: #fff;
+}
+
+.progress-marker {
+  display: block;
+  position: relative;
+}
+
+.progress-step .progress-text {
+  color: #333;
+}
+
+.progress-text {
+  display: block;
+  padding: 8px 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.progress-step.is-complete .progress-marker::before,
+.progress-step.is-progress .progress-marker::before {
+  background-color: #5baf63;
+}
+
+.progress-step.is-complete .progress-marker::after,
+.progress-step.is-progress .progress-marker::after {
+  background-color: #5baf63;
+}
+
+.progress-marker::before {
+  content: attr(data-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  padding-bottom: 2px;
+  border-radius: 50%;
+  transition: background-color, border-color;
+  transition-duration: 0.3s;
+}
+
+.progress-marker::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -10;
+  top: 7px;
+  right: -12px;
+  width: 100%;
+  height: 3px;
+  transition: background-color 0.3s, background-position 0.3s;
+}
+
+.progress-tracker--center .progress-marker::before,
+.progress-tracker--center .progress-text--dotted::before {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress-tracker--center .progress-marker::after {
+  right: -50%;
+}
+
+.progress-step:last-child .progress-marker::after {
+  right: 50%;
+}
+
+.progress-step .progress-marker::before {
+  background-color: #b6b6b6;
+}
+
+.progress-step .progress-marker::after {
+  background-color: #b6b6b6;
+}
+
+.progress-tracker--text .progress-step:last-child,
+.progress-tracker--center .progress-step:last-child,
+.progress-tracker--right .progress-step:last-child {
+  flex-grow: 1;
+}
+
+h4.progress-title {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.progress-step.is-active .progress-marker::before {
+  background-color: #2196f3;
+}
+
+.techhiwwrapper {
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.techhiwitem__content {
+  width: 100%;
+  .left {
+    width: 200px;
+  }
+}
+
+.techhiwitem__content h4 {
+  font-size: 13px;
+}
+
+p.techhiw__paragraph {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.techhiwitem {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.techhiwitem__leftside {
+  display: flex;
+  margin-right: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.techhiw__arrow {
+  width: 12px;
+  margin-top: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-image: url("https://uploads-ssl.webflow.com/5ffd73946b77c6ca0c73e187/6011960964cff56ec2f3e18f_hiw-arrow.svg");
+  background-position: 50% 100%;
+  background-size: 10px;
+  background-repeat: no-repeat;
+}
+
+.techhiwitem:last-child .techhiw__arrow {
+  background-image: none;
+}
+.techhiw__iconwrapper {
+  text-align: center;
+  width: 25px;
+}
+
+.techhiw__iconwrapper svg {
+  font-size: 20px;
+}
+
+.no-data {
+  color: #f47920;
+}
+
+.product-details {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.product-details:last-child {
+  border-bottom: 0px solid #ececec;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.product-details .p-name,
+.product-details .p-quantity {
+  font-weight: 600;
+  font-size: 16px;
+  color: #3f66da;
+}
+
+.product-details .p-quantity {
+  padding-left: 10px;
+}
+
+.linkActive {
+  font-weight: 700;
+}
+
+.pkg-condition {
+  font-size: 12px;
+  svg {
+    font-size: 9px;
+    top: -1px;
+    position: relative;
+  }
+  .success {
+    color: #22cd22;
+    padding-right: 3px;
+  }
+  .danger {
+    color: #ff0000;
+    padding-right: 3px;
+  }
+
+  .font-bold {
+    font-weight: 700;
+  }
+}
+
+.temperature {
+  top: -4px;
+  position: relative;
+  font-size: 10px;
+}
+
+.width-200 {
+  width: 200px;
+}

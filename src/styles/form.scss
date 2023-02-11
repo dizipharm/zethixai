@@ -1,0 +1,45 @@
+.form-react-bootstrap {
+  padding: 0px;
+  padding-bottom: 20px;
+
+  .form-floating {
+    label {
+      padding: 0.75rem 0.75rem;
+      color: #8f8d8d;
+    }
+
+    .form-control,
+    .form-select {
+      height: 46px;
+      padding: 0.75rem 0.75rem;
+      font-size: 15px;
+    }
+
+    .form-control:focus,
+    .form-control:not(:placeholder-shown) {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      box-shadow: 0 0 0 0rem rgb(13 110 253 / 25%);
+      border-color: #ced4da;
+    }
+
+    .form-control:focus ~ label,
+    .form-control:not(:placeholder-shown) ~ label,
+    .form-select ~ label {
+      background-color: #fff;
+      transform: scale(0.85) translateY(-1.5rem) translateX(0.15rem);
+      height: 23px;
+      opacity: 0.95;
+      font-size: 15px;
+      padding: 0px 3px;
+      color: #8f8d8d;
+      margin-left: 5px;
+      margin-top: 8px;
+    }
+  }
+}
+
+.form-floating > input[type="file"] {
+  height: calc(3.5rem + 2px);
+  line-height: 3.25 !important;
+}
