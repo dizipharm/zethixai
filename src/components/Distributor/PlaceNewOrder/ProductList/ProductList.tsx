@@ -159,8 +159,8 @@ const ProductList = () => {
             aria-label="Default select example"
             onChange={(e) => handleSearchValue(e, "select")}
           >
-            <option value="brand_name">By Brand Name (Drug Name)</option>
-            <option value="labeler_name">By Labeler Name (Manufacturer)</option>
+            <option value="brand_name">By Material Name</option>
+            <option value="labeler_name">By Manufacturer</option>
           </select>
         </div>
 
@@ -214,34 +214,34 @@ const ProductList = () => {
                 <div className="d-flex justify-content-between">
                   <div className="product-img-div">
                     {/* <FontAwesomeIcon icon={faPills} /> */}
-                    <img src="https://cdn-icons-png.flaticon.com/128/656/656019.png" />
+                    {/* <img src="https://cdn-icons-png.flaticon.com/128/656/656019.png" /> */}
                   </div>
                   <div className="product-info">
                     <div>
-                      <label>Brand Name:</label>
+                      <label>Material Name:</label>
                       <span>{item.brand_name}</span>
                     </div>
                     <div>
                       <label>Generic Name:</label>
                       <span>{item.generic_name} </span>
                     </div>
-                    <div>
+                    {/* <div>
                       <label>Labeler Name:</label>
                       <span>{item.labeler_name} </span>
-                    </div>
-                    <div>
-                      <label>Product NDC:</label>{" "}
-                      <span>{item.product_ndc}</span>
-                    </div>
+                    </div> */}
+                    {/* <div> */}
+                      {/* <label>Product NDC:</label>{" "} */}
+                      {/* <span>{item.product_ndc}</span> */}
+                    {/* </div> */}
                     <div>
                       <label>Unit Price:</label>{" "}
-                      <span> {item.price && item.price.toFixed(2)} USD</span>
+                      <span> {item.price && item.price.toFixed(2)} GBP</span>
                     </div>
 
                     <div>
-                      <label>Dosage:</label> <span> {item.dosage_form}</span>
+                      <label>Quantity:</label> <span> {item.dosage_form}</span>
                     </div>
-                    <div className="d-flex">
+                    {/* <div className="d-flex">
                       <label>Package Details :</label>
                       <span className="pkg-details">
                         {item &&
@@ -251,7 +251,7 @@ const ProductList = () => {
                             return <span key={index}>{pkg.description}</span>;
                           })}
                       </span>
-                    </div>
+                    </div> */}
                     <div>
                       <label>Shipping Time:</label> <span> 21days</span>
                     </div>

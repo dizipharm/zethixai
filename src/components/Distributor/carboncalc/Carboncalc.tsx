@@ -8,7 +8,7 @@ interface TableRow {
   substructural_element_name:string;
   A1_A3:number;
   A4:number;
-  WF:number;
+  A5w:number;
   C2:number;
   C3_C4:number;
   C2_C4:number;
@@ -43,14 +43,11 @@ function DisCarboncalc() {
         </tr>
         <br/>
         <br/>
-        
-
-
         <tr>
           
-          <th style={{background:"lightblue", textAlign:"center", color:"black"}}>                Carbon Calculations</th>
+          <th style={{background:"darkblue", textAlign:"center", color:"white"}}>  Carbon Calculations</th>
           
-          <th colSpan={10} style={{background:"darkorange", textAlign:"center", color:"black"}}>Building Stages Embodied Carbon[tCO2e]</th>
+          <th colSpan={10} style={{background:"orange", textAlign:"center", color:"white"}}>Building Stages Embodied Carbon[tCO2e]</th>
 
         </tr>
         <tr>
@@ -70,13 +67,10 @@ function DisCarboncalc() {
           <th>A1-A3</th>
           <th>A4</th>
           <th>A5w</th>
-          <th>C2</th>
-          <th>C3-C4</th>
+          <th>B1-B5</th>
           <th>C2-C4</th>
           <th>D</th>
-          <th>Total(A1-A5)</th>
-          <th>Total(A-C)</th>
-          <th>CO2</th>
+
         </tr>
       </thead>
       <tbody>
@@ -85,14 +79,10 @@ function DisCarboncalc() {
             <th>{row.substructural_element_name}</th>
             <td>{row.A1_A3}</td>
             <td>{row.A4}</td>
-            <td>{row.WF}</td>
+            <td>{row.A5w}</td>
             <td>{row.C2}</td>
-            <td>{row.C3_C4}</td>
             <td>{row.C2_C4}</td>
             <td>{row.D}</td>
-            <td>{row.TOTAL_A1_A5}</td>
-            <td>{row.TOTAL_A_C}</td>
-            <td>{row.CO2}</td>
 
 
           </tr>
@@ -114,9 +104,9 @@ function DisCarboncalc() {
 
             <tr>
 
-              <th style={{ background: "grey", textAlign: "center", color: "black" }}>                Carbon Calculations</th>
+              <th style={{ background: "Blue", textAlign: "center", color: "white" }}>                Carbon Calculations</th>
 
-              <th colSpan={6} style={{ background: "grey", textAlign: "center", color: "black" }}>Building Stages Embodied Carbon[tCO2e]</th>
+              <th colSpan={6} style={{ background: "Blue", textAlign: "center", color: "white" }}>Building Stages Embodied Carbon[tCO2e]</th>
 
             </tr>
             <tr>
@@ -135,7 +125,7 @@ function DisCarboncalc() {
 
               <th>A1-A3</th>
               <th>A4</th>
-              <th>WF</th>
+              <th>A5w</th>
               <th>C2</th>
               <th>C3-C4</th>
               <th>C2-C4</th>

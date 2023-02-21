@@ -44,12 +44,12 @@ const OrdersForecast = (props: OrdersForecastProps) => {
           </Col>
           <Col lg="7" className="secondary-stats">
             <div className="block">
-              <span className="label">Oncology</span>
+              <span className="label">Raw Materials</span>
               <span className="value">{value1}</span>
             </div>
 
             <div className="block">
-              <span className="label">Cardiology</span>
+              <span className="label">Construction</span>
               <span className="value">{value2}</span>
             </div>
           </Col>

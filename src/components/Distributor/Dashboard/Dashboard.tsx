@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React from 'react';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Doughnut } from 'react-chartjs-2';
 import { Row, Container } from "react-bootstrap";
 import OrderCard from "./OrderCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,20 +14,52 @@ import {
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import { getUserName } from "../../../services/AuthService";
+// @ts-ignore
+import dash from "../../../assets/images/dash.jpg"
 
-interface ScanOrdersProps {}
+ChartJS.register(ArcElement, Tooltip, Legend);
 
-interface ScanOrdersState {}
+export const data = {
+  labels: [
+    "Internal Finishes",
+    "Superstructure",
+    "Façade",
+    "Internal walls and partitions",
+    "Internal finishes",
+    "FF&E",
+    "Building Services",
+  ],
+  datasets: [
+    {
+      label: '',
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundColor: [
+        "#b91d47",
+        "#00aba9",
+        "yellow",
+        "green",
+        "#c45850",
+        "#CD9C5C",
+        "#1e7145",
+      ],
+      borderColor: [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#c45850",
+        "#CD9C5C",
+        "#1e7145",
+      ],
+      borderWidth: 1,
+    },
+  ],
+};
 
-class DistributorDashboard extends React.Component<
-  ScanOrdersProps,
-  ScanOrdersState
-> {
-  state = {};
-  render() {
-    return (
-      <>
-        <h1 className="page-title big">
+ function Dashboard() {
+  return(
+    <>
+    <h1 className="page-title big">
           Hi,{" "}
           <span className="nickname">
             {getUserName()}{" "}
@@ -35,68 +69,18 @@ class DistributorDashboard extends React.Component<
             </small>
           </span>
         </h1>
-        <Row>
-          <OrderCard
-            title="Total Orders"
-            orderValue="13999"
-            value1="8000"
-            value2="5999"
-            icon={faTruckFast}
-            iconClor="green"
-          />
-          <OrderCard
-            title="Received Orders"
-            orderValue="7500"
-            value1="4499"
-            value2="3001"
-            icon={faCheck}
-            iconClor="green"
-          />
-        </Row>
-
-        <hr className="row-divider" />
-
-        <Row>
-          <OrderCard
-            title="Pending Orders"
-            orderValue="7101"
-            value1="5000"
-            value2="5999"
-            icon={faUser}
-            iconClor="green"
-          />
-          <OrderCard
-            title="Rejected Orders"
-            orderValue="3500"
-            value1="2501"
-            value2="999"
-            icon={faCheckDouble}
-          />
-        </Row>
-
-        <hr className="row-divider" />
-
-        <Row>
-          <OrderCard
-            title="Returns"
-            orderValue="200"
-            value1="159"
-            value2=" 41"
-            icon={faRotateLeft}
-          />
-          <OrderCard
-            title="Recalls"
-            orderValue="5500"
-            value1="3500"
-            value2="2000"
-            icon={faPaperPlane}
-          />
-        </Row>
-
-        <hr className="row-divider" />
-      </>
-    );
-  }
+        <div style={{display :'flex'}}>
+    <div style={{width:'50%', height:'50%'}}>
+      
+    <Doughnut data={data} />
+    </div>
+    <div >
+      <img src={dash} style={{width:'70%', height:'70%'}} />
+    </div>
+    </div>
+    </>
+  )
 }
 
-export default DistributorDashboard;
+
+export default Dashboard

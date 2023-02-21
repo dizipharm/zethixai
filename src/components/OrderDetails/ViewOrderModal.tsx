@@ -22,12 +22,12 @@ const ViewOrderModal = (props: any) => {
           <Table className="order-table">
             <thead>
               <tr>
-                <th>Brand Name</th>
+                <th>Material Name</th>
                 <th>Quantity</th>
                 <th>GTIN</th>
                 <th>Product NDC</th>
-                <th>Dosage</th>
-                <th>Package Details</th>
+                {/* <th>Dosage</th> */}
+                {/* <th>Package Details</th> */}
 
                 {orderType === "NEW" && <th></th>}
               </tr>

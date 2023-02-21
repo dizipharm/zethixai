@@ -21,7 +21,7 @@ const MyTradingPartners = ({ location }: Props) => {
 
   return (
     <>
-      <h1 className="page-title big">{value} (Trading Partner)</h1>
+      <h1 className="page-title big">{} (Ministry of Justice)</h1>
       <Row>
         <OrderCard
           title="Total Orders"

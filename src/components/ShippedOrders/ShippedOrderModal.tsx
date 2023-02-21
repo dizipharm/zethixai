@@ -25,7 +25,7 @@ const ShippedOrderModal = (props: any) => {
             <thead>
               <tr>
                 <th>Shipment No</th>
-                <th>Consignment No</th>
+                <th>Consignment </th>
                 <th>Package GTIN</th>
                 <th>Line Item Quantity</th>
                 <th>Product NDC</th>

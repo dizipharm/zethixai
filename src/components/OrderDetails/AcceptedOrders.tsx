@@ -118,7 +118,7 @@ const AcceptedOrders = ({
                       <FormikControl
                         control="input"
                         name="custodionName"
-                        label="Custodion Name"
+                        label=" Name"
                         onChange={handleChange}
                       />
                     </div>

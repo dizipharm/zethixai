@@ -14,7 +14,7 @@ import {
   OrderSuccess,
 } from "./components/Distributor/PlaceNewOrder/PlaceOrder";
 
-// Retailer imports
+// Retailer imports 
 import RetailerDashboard from "./components/Retailer/Dashboard"
 import RetailerReturns from "./components/Retailer/Returns";
 import RetailerRecalls from "./components/Retailer/Recalls";
@@ -54,6 +54,13 @@ import DisList from "./components/Distributor/List/List";
 import DisOrderSuccess from "./components/Distributor/List/OrderSuccess";
 import DisMaterial from "./components/Distributor/material/materialspec";
 import DisCarboncalc from "./components/Distributor/carboncalc/Carboncalc";
+import DisPlaceOrder from "./components/Distributor/List/DisPlaceOrder";
+import Quotations from "./components/Distributor/Quotations/Quotations";
+import Payments from "./components/Distributor/Payments/Payments";
+import Carbonoffset from "./components/Distributor/carbonoffsetting/Carbonoffset";
+import X from "./components/Distributor/X/X";
+import Y from "./components/Distributor/Y/Y";
+import Z from "./components/Distributor/Z/Z";
 
 export const App = (props: any) => {
   useEffect(() => {
@@ -204,10 +211,15 @@ export const App = (props: any) => {
               path="/distributor/list"
               component={DisList}
             />
-             <PrivateRoute
+            <PrivateRoute
               exact
-              path="/distributor/list/saved"
+              path="/distributor/ordersuccess"
               component={DisOrderSuccess}
+            />
+            <PrivateRoute
+              exact
+              path="/distributor/displaceorder"
+              component={DisPlaceOrder}
             />
             <PrivateRoute
               exact
@@ -219,6 +231,36 @@ export const App = (props: any) => {
               path="/distributor/carboncalculations"
               component={DisCarboncalc}
             />
+            <PrivateRoute
+              exact
+              path="/distributor/quotations"
+              component={Quotations}
+            />
+             <PrivateRoute
+              exact
+              path="/distributor/payments"
+              component={Payments}
+            />
+             <PrivateRoute
+              exact
+              path="/distributor/carbonoffset"
+              component={Carbonoffset}
+            />
+            <PrivateRoute
+              exact
+              path="/distributor/x"
+              component={X}
+            />
+            <PrivateRoute
+            exact
+            path="/distributor/y"
+            component={Y}
+          />
+          <PrivateRoute
+          exact
+          path="/distributor/z"
+          component={Z}
+        />
 
             {/* retailer Routes */}
 
@@ -227,11 +269,7 @@ export const App = (props: any) => {
               path="/retailer/my-trading-partners"
               component={MyTradingPartners}
             />
-            <PrivateRoute
-              exact
-              path="/retailer/dashboard"
-              component={RetailerDashboard}
-            />
+
             <PrivateRoute
               exact
               path="/retailer/returns"
@@ -305,13 +343,18 @@ export const App = (props: any) => {
               path="/retailer/add-location"
               component={Settings}
             />
-            
+            <PrivateRoute
+              exact
+              path="/retailer/apptest"
+              component={List}
+            />
+
             <PrivateRoute
               exact
               path="/retailer/list"
               component={List}
             />
-             <PrivateRoute
+            <PrivateRoute
               exact
               path="/retailer/list/saved"
               component={ListOrderSuccess}
@@ -331,6 +374,11 @@ export const App = (props: any) => {
               exact
               path="/retailer/carboncalculations"
               component={Carboncalc}
+            />
+                        <PrivateRoute
+              exact
+              path="/retailer/dashboard"
+              component={RetailerDashboard}
             />
 
             {/* Manufacturer Routes */}

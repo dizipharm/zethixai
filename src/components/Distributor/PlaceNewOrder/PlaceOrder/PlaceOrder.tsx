@@ -236,11 +236,11 @@ const PlaceOrder = (props: Props) => {
                   value="2396 Hiney Road, Las Vegas, Nevada, Zip code-89104, United States"
                 />
                 <label className="form-check-label">
-                  2396 Hiney Road, Las Vegas, Nevada, Zip code-89104, United
-                  States
+                  144 Windmill Road, SL13sw, United
+                  Kingdom
                 </label>{" "}
                 <br />
-                <span>GLN: {destGln}</span>
+                {/* <span>GLN: {destGln}</span> */}
               </div>
             </Row>
 
@@ -288,7 +288,7 @@ const PlaceOrder = (props: Props) => {
                       {cd.brand_name} ({cd.qty})
                     </div>
                     <div className="price">
-                      {(cd.price && cd.price * cd.qty).toFixed(2)} USD
+                      {(cd.price && cd.price * cd.qty).toFixed(2)} GBP
                     </div>
                   </ListGroup.Item>
                 );
@@ -300,7 +300,7 @@ const PlaceOrder = (props: Props) => {
                   <strong> Total </strong>
                 </span>
               </div>
-              <strong> {totalPrice.toFixed(2)} USD</strong>
+              <strong> {totalPrice.toFixed(2)} GBP</strong>
             </ListGroup.Item>
           </ListGroup>
         </Col>

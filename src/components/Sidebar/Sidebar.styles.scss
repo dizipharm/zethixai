@@ -7,7 +7,7 @@
   position: fixed;
   top: 61px;
   width: 280px;
-  background: #55595e;
+  background: #1A7676;
   overflow-y: auto;
 
   .nav-item {
@@ -36,11 +36,11 @@
     }
 
     &:hover {
-      color: $oragne !important;
+      color: #006466 !important;
     }
 
     &.active {
-      background-color: #f47920 !important;
+      background-color: #19d2d2 !important;
       color: $white !important;
     }
   }

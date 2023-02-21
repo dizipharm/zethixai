@@ -30,7 +30,7 @@ const OrderTable = ({
           <tr className="order-thead-tr">
             <th>Date of order</th>
             <th>Reference Number</th>
-            <th className="text-center">Total Items</th>
+            <th className="text-center">Total Quantity</th>
             <th>Order Placed By</th>
             <th>Delivery address</th>
             {orderType === "MYORDERS" && <th>Status</th>}

@@ -1,3 +1,5 @@
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { postSelectedSpecsData } from '../../../services/retailerService';
@@ -105,7 +107,7 @@ export const DisList = () => {
                         <td>{book.isbn.split(';')[0]}</td>
 
                         <td className='delete-btn' onClick={() => deleteBook(index)}>
-                          Delete
+                          <FontAwesomeIcon icon={faTrash}  />
                         </td>
                       </tr>
                     ))
@@ -118,10 +120,10 @@ export const DisList = () => {
               <Link to='/distributor/materialspecifications'>
                 <button className='btn btn-warning btn-md'>Back</button>
               </Link>
-              <Link to='/distributor/list/saved'>
+              <Link to='/distributor/displaceorder'>
                 <button 
                 className='btn btn-danger btn-md'
-                onClick={() => submitData()}
+                
                 >Save</button>
               </Link>
 

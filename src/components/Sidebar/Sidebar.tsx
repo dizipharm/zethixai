@@ -18,11 +18,15 @@ import {
   faAirFreshener,
   faDollar,
   faPoundSign,
+  faAdd,
+  faMinimize,
+  fa7,
 } from "@fortawesome/free-solid-svg-icons";
 import { faCircleUser, faHandshake } from "@fortawesome/free-regular-svg-icons";
 // @ts-ignore
 import "./Sidebar.styles.scss";
 import { getUserData } from "../../services/AuthService";
+import { faAccusoft } from "@fortawesome/free-brands-svg-icons";
 
 interface SidebarProps {}
 
@@ -293,10 +297,9 @@ const ManufacturerMenus = ({ location, history }: any) => {
           to={"/manufacturer/add-new-product"}
           className={`${uploadActive && "active"} nav-link`}
         >
-          <FontAwesomeIcon icon={faUpload} /> Location
+          <FontAwesomeIcon icon={faUpload} /> Update Materials
         </Link>
       </li>
-
       <li className="nav-item">
         <Link
           to={"#"}
@@ -366,10 +369,19 @@ const DistributorMenus = ({ location, history }: any) => {
     location === "/distributor/order-management" ||
     location === "/distributor/order-management/accepted-orders" ||
     location === "/distributor/order-management/rejected-orders";
+    
   const homeActive = location === "/distributor/dashboard";
   const carbonActive = location === "/distributor/carboncalculations"
   const materialActive = location === "/distributor/materialspecifications"
   const OrderSummaryActive = location ==="/distributor/ordersummary"
+  const QuotationsActive = location ==="/distributor/quotations"
+  const paymentsActive = location ==="/distributor/payments"
+  const carboncalculations = location === "/distributor/carbonoffset"
+  const XActive = location === "/distributor/x"
+  const YActive = location === "/distributor/y"
+  const ZActive = location === "/distributor/z"
+
+
 
   const handleTradingPartner = (value: string) => {
     history.push({
@@ -382,12 +394,42 @@ const DistributorMenus = ({ location, history }: any) => {
     <ul className="nav nav-pills flex-column mb-auto">
             <li className="nav-item">
         <Link
-          to="/manufacturer/dashboard"
+          to="/distributor/dashboard"
           className={`${homeActive && "active"} nav-link`}
         >
           <FontAwesomeIcon icon={faHome} /> Home
         </Link>
       </li>
+      <li className="nav-item">
+        <Link
+          to={"/distributor/x"}
+          className={`${XActive && "active"} nav-link`}
+
+        >
+          <FontAwesomeIcon icon={faMinimize} /> ESG Exec Dashbord 
+        </Link>
+        </li>
+        <li className="nav-item">
+        <Link
+          to={"/distributor/y"}
+          className={`${YActive && "active"} nav-link`}
+
+        >
+          <FontAwesomeIcon icon={faAdd} /> ESG Analytics
+        </Link>
+        </li>
+
+      <li className="nav-item">
+        <Link
+          to={"/distributor/z"}
+          className={`${ZActive && "active"} nav-link`}
+
+        >
+          <FontAwesomeIcon icon={faAccusoft} /> ESG Evidence Assets 
+        </Link>
+      
+      </li>
+
       {/* <li className="nav-item">
         <Link
           to={"/distributor/ordersummary"}
@@ -412,45 +454,21 @@ const DistributorMenus = ({ location, history }: any) => {
           <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             <li onClick={() => handleTradingPartner("TracePharm")}>
               <Link to={"#"} className="link-dark">
-                TraceBuild
-              </Link>
-            </li>
-            <li onClick={() => handleTradingPartner("Fizer")}>
-              <Link to={"#"} className="link-dark">
-                Lindum
+                Ministry of Justice
               </Link>
             </li>
           </ul>
         </div>
       </li>
-
       <li className="nav-item">
         <Link
-          to={"#"}
-          className="nav-link"
-          data-bs-toggle="collapse"
-          data-bs-target="#alert-collapse"
-          aria-expanded="true"
+          to={"/distributor/quotations"}
+          className={`${QuotationsActive && "active"} nav-link`}
+
         >
-          <FontAwesomeIcon icon={faBullhorn} /> Quotations (<span>63</span>)
-          <FontAwesomeIcon icon={faAngleDown} className="float-end" />
+          <FontAwesomeIcon icon={faBullhorn} /> Quotations 
         </Link>
-        <div className="collapse" id="alert-collapse">
-          <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li>
-              <Link to={"#"} className="link-dark">
-                {" "}
-                - Recalls (29)
-              </Link>
-            </li>
-            <li>
-              <Link to={"#"} className="link-dark">
-                {" "}
-                - Returns (34)
-              </Link>
-            </li>
-          </ul>
-        </div>
+        
       </li>
 
 
@@ -462,6 +480,7 @@ const DistributorMenus = ({ location, history }: any) => {
           <FontAwesomeIcon icon={faBorderAll} /> Material Specification
         </Link>
       </li>
+      
       <li className="nav-item">
         <Link
           to="/distributor/carboncalculations"
@@ -470,11 +489,12 @@ const DistributorMenus = ({ location, history }: any) => {
           <FontAwesomeIcon icon={faShippingFast} /> Carbon Calculations
         </Link>
       </li>
+            
       <li className="nav-item">
         <Link
-          to="/manufacturer/shOrders"
+          to="/distributor/payments"
           className={`${
-            location === "/manufacturer/shOrders" && "active"
+            paymentsActive  && "active"
           } nav-link`}
         >
           <FontAwesomeIcon icon={faMoneyBillWave} /> Payments
@@ -490,25 +510,26 @@ const DistributorMenus = ({ location, history }: any) => {
       </li>
       <li className="nav-item">
         <Link
-          to="/manufacturer/shOrders"
+          to="#"
           className={`${
             location === "/manufacturer/shOrders" && "active"
           } nav-link`}
         >
-          <FontAwesomeIcon icon={faMoneyBillWave} /> Health & Safety
+          <FontAwesomeIcon icon={faMoneyBillWave} /> Project Management
         </Link>
       </li>
       <li className="nav-item">
         <Link
-          to="/manufacturer/shOrders"
+          to="/distributor/carbonoffset"
           className={`${
-            location === "/manufacturer/shOrders" && "active"
+            location === "/distributor/carbonoffset" && "active"
           } nav-link`}
         >
           <FontAwesomeIcon icon={faAirFreshener} /> Carbon Offsetting
         </Link>
       </li>
-      
+
+
 
       <li className="nav-item">
         <Link
@@ -612,7 +633,7 @@ const RetailerMenus = ({ location, history }: any) => {
           <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             <li onClick={() => handleTradingPartner("TracePharm")}>
               <Link to={"#"} className="link-dark">
-                GallifordTRy
+                GallifordTry
               </Link>
             </li>
 

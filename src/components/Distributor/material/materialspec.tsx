@@ -150,11 +150,11 @@ export const DisMaterial = () => {
             <div>
 
               <button type="submit" className='btn btn-success btn-md' >
-                ADD
+                Add to Cart
               </button>
               <Link to='/distributor/list'>
                 <button className='btn btn-warning btn-md' >
-                  View List
+                  View Cart
                 </button>
               </Link>
 

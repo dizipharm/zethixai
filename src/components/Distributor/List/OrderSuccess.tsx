@@ -20,9 +20,7 @@ const DisOrderSuccess = (props: any) => {
         <FontAwesomeIcon icon={faCircleCheck} style={{ color: "#90e794" }} />{" "}
         Your Order Placed Successfully
       </h3>
-      <h5 className="mt-3" style={{ fontWeight: "400" }}>
-        Your order reference number is <strong>{orderReferenceNum}</strong>
-      </h5>
+
     </div>
   );
 };

@@ -34,11 +34,11 @@ const AddedProducts = ({ data }: any) => {
                     </div>
                     <div>
                       <label>Unit Price:</label>{" "}
-                      <span> {item.price && item.price.toFixed(2)} USD</span>
+                      <span> {item.price && item.price.toFixed(2)} GBP</span>
                     </div>
 
                     <div>
-                      <label>Dosage:</label> <span> {item.dosage_form}</span>
+                      <label>Unit details:</label> <span> {item.dosage_form}</span>
                     </div>
                     <div className="d-flex">
                       <label>Package Details :</label>

@@ -92,7 +92,7 @@ const ShippedOrders = (props: Props) => {
               return (
                 <tr className="" key={i}>
                   <td className="order-date">
-                    {moment(d.shipped_date).format("DD-MMM-YYYY")}
+                    {moment(d.shipped_date).format("21/02/2023")}
                   </td>
                   <td className="order-total"> {d.sscc_no} </td>
                   <td className="order-id">{d.purchase_order}</td>
