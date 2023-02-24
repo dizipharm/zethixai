@@ -32,24 +32,24 @@ function X() {
           <th>Corporate Behavior</th>
         </tr>
         <tr style={{background:'lightgrey',border:'black'}}>
-          <th style={{ padding: '10px' }}>Carbon Emissions</th>
-          <th>Water Stress</th>
+          <th style={{ background:'orange', padding: '10px' }}>Carbon Emissions</th>
+          <th style={{background:'orange',border:'pink'}}>Water Stress</th>
           <th>Toxic Emissions & Waste</th>
           <th>Clean Tech</th>
           <th>Labor Management</th>
           <th>Product Safety & Quality</th>
           <th>Controversial Sourcing</th>
           <th>Access to Communication</th>
-          <th  style={{background:'pink',border:'pink'}}>Board</th>
-          <th  style={{background:'pink',border:'pink'}}>Business Ethics</th>
+          <th  style={{background:'orange',border:'pink'}}>Board</th>
+          <th  style={{background:'orange',border:'pink'}}>Diversity & Ethics</th>
         </tr>
         <tr style={{background:'lightgrey',border:'black'}}>
           <th style={{ padding: '10px' }}>Product Carbon Footprint</th>
           <th>Biodiversity & Land Use</th>
           <th>Packaging material & Waste</th>
           <th>Green Building</th>
-          <th>Health & Safety</th>
-          <th>Chemical Safety</th>
+          <th style={{background:'orange',border:'pink'}}>Health & Safety</th>
+          <th style={{background:'orange',border:'pink'}}>Education & Skills</th>
           <th>Community Relations</th>
           <th>Access to Finance</th>
           <th  style={{background:'pink',border:'pink'}}>Pay</th>
@@ -59,12 +59,12 @@ function X() {
           <th>Financing Environmental Impact</th>
           <th>Raw Material Sourcing</th>
           <th>Electronic Waste</th>
-          <th>Renewable Energy</th>
+          <th style={{background:'orange',border:'pink'}}>Renewable Energy</th>
           <th>Human Captital Development</th>
           <th>Consumer Financial Protection</th>
           <th style={{background:'white',border:'white'}}></th>
           <th>Access to Health Care</th>
-          <th  style={{background:'pink',border:'pink'}}>Ownership</th>
+          <th  style={{background:'orange',border:'pink'}}>Supply Chain</th>
           <th  style={{background:'white',border:'white'}}></th>
         </tr>
         <tr style={{background:'lightgrey',border:'black'}} >

@@ -462,6 +462,16 @@ const DistributorMenus = ({ location, history }: any) => {
       </li>
       <li className="nav-item">
         <Link
+          to="/distributor/carbonoffset"
+          className={`${
+            location === "/distributor/carbonoffset" && "active"
+          } nav-link`}
+        >
+          <FontAwesomeIcon icon={faAirFreshener} /> Carbon Offsetting
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link
           to={"/distributor/quotations"}
           className={`${QuotationsActive && "active"} nav-link`}
 
@@ -500,6 +510,7 @@ const DistributorMenus = ({ location, history }: any) => {
           <FontAwesomeIcon icon={faMoneyBillWave} /> Payments
         </Link>
       </li>
+
       <li className="nav-item">
         <Link
           to="/distributor/product-lsit"
@@ -518,16 +529,7 @@ const DistributorMenus = ({ location, history }: any) => {
           <FontAwesomeIcon icon={faMoneyBillWave} /> Project Management
         </Link>
       </li>
-      <li className="nav-item">
-        <Link
-          to="/distributor/carbonoffset"
-          className={`${
-            location === "/distributor/carbonoffset" && "active"
-          } nav-link`}
-        >
-          <FontAwesomeIcon icon={faAirFreshener} /> Carbon Offsetting
-        </Link>
-      </li>
+
 
 
 

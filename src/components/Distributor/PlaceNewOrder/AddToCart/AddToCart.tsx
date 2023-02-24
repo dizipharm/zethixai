@@ -72,7 +72,7 @@ const AddToCart = (props: Props) => {
             return cartData.push({
               cart_id: d._id,
               product_id: d.product._id,
-              material_name: d.product.material_name,
+              brand_name: d.product.brand_name,
               qty: d.qty,
               price: d.product.price,
             });
@@ -106,11 +106,11 @@ const AddToCart = (props: Props) => {
                         onClick={() => removeCart(cd.cart_id)}
                       />
                     </td>
-                    {/* <td className="cart-img">
-                      <img src="https://cdn-icons-png.flaticon.com/128/656/656019.png" />
-                    </td> */}
+                    <td className="cart-img">
+                      <img src="https://cdn-icons-png.flaticon.com/128/656/656018.png" />
+                    </td>
 
-                    <td className="cart-product-name">{cd.material_name}</td>
+                    <td className="cart-product-name">{cd.brand_name}</td>
                     <td className="cart-quantity">
                       <select
                         value={cd.qty}
@@ -125,7 +125,7 @@ const AddToCart = (props: Props) => {
                       </select>
                     </td>
                     <td className="cart-price">
-                      {(cd.price && cd.price * cd.qty).toFixed(2)} GBP
+                      {(cd.price && cd.price * cd.qty).toFixed(2)} USD
                     </td>
                   </tr>
                 );

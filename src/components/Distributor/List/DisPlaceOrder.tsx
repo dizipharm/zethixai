@@ -220,7 +220,7 @@ export const DisList = () => {
 
                 <Button
                   onClick={() => submitData()}
-                  variant="success">Place Order</Button>{' '}
+                  variant="success">Save</Button>{' '}
 
               </Link>
             </ListGroup.Item>
