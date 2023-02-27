@@ -1,4 +1,5 @@
 import Table from 'react-bootstrap/Table';
+import { Link } from 'react-router-dom';
 
 function X() {
   return (
@@ -32,7 +33,7 @@ function X() {
           <th>Corporate Behavior</th>
         </tr>
         <tr style={{background:'lightgrey',border:'black'}}>
-          <th style={{ background:'orange', padding: '10px' }}>Carbon Emissions</th>
+          <th style={{ background:'orange', padding: '10px' }}><Link to ="/distributor/carbonemissions" >Carbon Emissions</Link></th>
           <th style={{background:'orange',border:'pink'}}>Water Stress</th>
           <th>Toxic Emissions & Waste</th>
           <th>Clean Tech</th>
@@ -41,14 +42,14 @@ function X() {
           <th>Controversial Sourcing</th>
           <th>Access to Communication</th>
           <th  style={{background:'orange',border:'pink'}}>Board</th>
-          <th  style={{background:'orange',border:'pink'}}>Diversity & Ethics</th>
+          <th  style={{background:'orange',border:'pink'}}><Link to ="/distributor/diversityandethics" >Diversity & Ethics</Link></th>
         </tr>
         <tr style={{background:'lightgrey',border:'black'}}>
           <th style={{ padding: '10px' }}>Product Carbon Footprint</th>
           <th>Biodiversity & Land Use</th>
           <th>Packaging material & Waste</th>
           <th>Green Building</th>
-          <th style={{background:'orange',border:'pink'}}>Health & Safety</th>
+          <th style={{background:'orange',border:'pink'}}><Link to ="/distributor/healthandsafety" >Health & Safety</Link></th>
           <th style={{background:'orange',border:'pink'}}>Education & Skills</th>
           <th>Community Relations</th>
           <th>Access to Finance</th>

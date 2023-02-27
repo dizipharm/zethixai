@@ -61,6 +61,9 @@ import Carbonoffset from "./components/Distributor/carbonoffsetting/Carbonoffset
 import X from "./components/Distributor/X/X";
 import Y from "./components/Distributor/Y/Y";
 import Z from "./components/Distributor/Z/Z";
+import Carbon from "./components/Distributor/ESGexc/Carbon";
+import Health from "./components/Distributor/ESGexc/Health";
+import Diversity from "./components/Distributor/ESGexc/Diversity";
 
 export const App = (props: any) => {
   useEffect(() => {
@@ -260,6 +263,22 @@ export const App = (props: any) => {
           exact
           path="/distributor/z"
           component={Z}
+        />
+                  <PrivateRoute
+          exact
+          path="/distributor/carbonemissions"
+          component={Carbon}
+        />
+        
+        <PrivateRoute
+          exact
+          path="/distributor/healthandsafety"
+          component={Health}
+        />
+                <PrivateRoute
+          exact
+          path="/distributor/diversityandethics"
+          component={Diversity}
         />
 
             {/* retailer Routes */}

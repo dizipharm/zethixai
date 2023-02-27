@@ -1,37 +1,24 @@
-
-import React, { Component } from "react";
-import { Row, Container } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBullhorn,
-  faTruckFast,
-  faCheck,
-  faUser,
-  faCheckDouble,
-  faRotateLeft,
-  faPaperPlane,
-} from "@fortawesome/free-solid-svg-icons";
-import { getUserName } from "../../../services/AuthService";
+import React, { useRef } from 'react';
 // @ts-ignore
-import esga from "../../../assets/images/esga.png"
-interface ScanOrdersProps {}
+import Uhr5 from "./../../../assets/images/Uhr5.mp4"
 
-interface ScanOrdersState {}
+type VideoPlayerProps = {
+  src: string;
+};
 
-class Y extends React.Component<
-  ScanOrdersProps,
-  ScanOrdersState
-> {
-  state = {};
-  render() {
-    return (
-      <>
+const Y: React.FC<VideoPlayerProps> = ({ src }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-        <img src ={esga} alt="esga" />
-        <hr className="row-divider" />
-      </>
-    );
-  }
-}
+  return (
+    <div style={{ textAlign: 'center' }}>
+            <h1>ESG Implementation</h1>
+
+      <video style={{width:"72%",height:"45%"}} ref={videoRef} controls>
+        <source src={Uhr5} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  );
+};
 
 export default Y;
